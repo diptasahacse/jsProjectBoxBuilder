@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+    grid-gap: 10px;
+}
+.input-area{
+    padding: 30px;
+    background-color: rgb(148, 160, 129);
+    
+}
+.output-area{
+    background-color: grey;
+    padding: 30px;
+}
+.cvalue {
+     display: inline;
+}
+#makeBox{
+    background-color: hotpink;
+}
+.fullwidth{
+    width: 100%;
+}
+.data{
+
+}
+.data label{
+    float: left;
+}
+.data p{
+    float: right;
+}
+.csssection{
+    height: 250px;
+    max-width: 450px;
+    background-color: lavender;
+}

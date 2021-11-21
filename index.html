@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <h2>Input Section</h2>
+            <div class="heightWidthBlock">
+                <div class="data">
+                    <label for="heightWidthRangeCounter">Height And Width :</label>
+                    <p class="cvalue"><span id="heightWidthValue"></span> px</p>
+
+                </div>
+                
+                <input  class="fullwidth"  type="range" id="heightWidthRangeCounter" min="0" max="500" value="35" oninput="change('heightWidth')">
+                
+            </div>
+            <div class="heightBlock">
+                <div class="data">
+                    <label for="heightRangeCounter">Height :</label>
+                    <p class="cvalue"><span id="hightValue"></span> px</p>
+
+                </div>
+                
+                <input  class="fullwidth"  type="range" id="heightRangeCounter" min="0" max="500" value="35" oninput="change('height')">
+                
+            </div>
+        
+            <div class="widthBlock">
+                <div class="data">
+                    <label for="widthRangeCounter">Width :</label>
+                    <p class="cvalue"><span id="widthValue"></span> px</p>
+
+                </div>
+                <input class="fullwidth" type="range" id="widthRangeCounter" min="0" max="500" value="40" oninput="change('width')">
+                
+            </div>
+
+            <div class="borderBlock">
+                <div class="data">
+                    <label for="borderRangeCounter">Border :</label>
+                    <p class="cvalue"><span id="borderValue"></span> px</p>
+
+                </div>
+                
+                <input class="fullwidth" type="range" id="borderRangeCounter" min="0" max="10" value="0" oninput="change('border')">
+                
+            </div>
+
+            <div class="borderRadiusBlock">
+                <div class="data">
+                    <label for="borderRadiusRangeCounter">borderRadius :</label>
+                    <p class="cvalue"><span id="borderRadiusValue"></span> px</p>
+
+                </div>
+                
+                <input class="fullwidth" type="range" id="borderRadiusRangeCounter" min="0" max="100" value="0" oninput="change('border radius')">
+                
+            </div>
+            <div class="csssection" >
+                <i id="cssSec"></i>
+
+            </div>
+        </div>
+        <div class="output-area">
+            <h2>Output Section</h2>
+            <div id="makeBox"></div>
+        </div>
+    </div>
+    
+    
+<script src="script.js"></script>
+</body>
+</html>
