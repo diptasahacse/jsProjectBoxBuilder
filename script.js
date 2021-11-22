@@ -15,7 +15,7 @@
 
            // Width Value
            document.getElementById("widthValue").innerText = document.getElementById("widthRangeCounter").value;
-           document.getElementById("makeBox").style.height = document.getElementById("widthRangeCounter").value+"px";
+           document.getElementById("makeBox").style.width = document.getElementById("widthRangeCounter").value+"px";
            
            // Height Value
            document.getElementById("hightValue").innerText = document.getElementById("heightRangeCounter").value;
