@@ -20,11 +20,15 @@ body{
     background-color: grey;
     padding: 30px;
 }
+label{
+    color: #2c2c2c;
+}
 .cvalue {
      display: inline;
+     color: #0a41e7;
 }
 #makeBox{
-    background-color: hotpink;
+    
 }
 .fullwidth{
     width: 100%;
@@ -39,7 +43,11 @@ body{
     float: right;
 }
 .csssection{
-    height: 250px;
-    max-width: 450px;
-    background-color: lavender;
+    padding: 10px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    margin-top: 10px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
 }

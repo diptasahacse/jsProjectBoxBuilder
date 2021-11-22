@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="input-area">
-            <h2>Input Section</h2>
+            <h3 style="margin-bottom: 10px;">Input Section :</h3>
             <div class="heightWidthBlock">
                 <div class="data">
                     <label for="heightWidthRangeCounter">Height And Width :</label>
@@ -55,7 +55,7 @@
 
             <div class="borderRadiusBlock">
                 <div class="data">
-                    <label for="borderRadiusRangeCounter">borderRadius :</label>
+                    <label for="borderRadiusRangeCounter">Border Radius :</label>
                     <p class="cvalue"><span id="borderRadiusValue"></span> px</p>
 
                 </div>
@@ -63,14 +63,18 @@
                 <input class="fullwidth" type="range" id="borderRadiusRangeCounter" min="0" max="100" value="0" oninput="change('border radius')">
                 
             </div>
-            <div class="csssection" >
-                <i id="cssSec"></i>
-
+            <div style="margin-top: 40px;">
+                <h3>Style Section :</h3>
+                <div class="csssection" >
+                    <code id="cssSec"></code>
+    
+                </div>
             </div>
+
         </div>
         <div class="output-area">
-            <h2>Output Section</h2>
-            <div id="makeBox"></div>
+            <h3 style="margin-bottom: 10px;">Output Section :</h3>
+            <div class="makeBox" id="makeBox"></div>
         </div>
     </div>
     
