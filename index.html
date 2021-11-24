@@ -11,6 +11,16 @@
     <div class="container">
         <div class="input-area">
             <h3 style="margin-bottom: 10px;">Input Section :</h3>
+            <!-- <div class="backColorBlock">
+                <div class="data">
+                    <label for="backColorRangeCounter">Background :</label>
+                    <p class="cvalue"><span id="backColorValue"></span> px</p>
+
+                </div>
+                
+                <input  class="fullwidth"  type="color" id="backColorRangeCounter" oninput="change('')">
+                
+            </div>             -->
             <div class="heightWidthBlock">
                 <div class="data">
                     <label for="heightWidthRangeCounter">Height And Width :</label>
@@ -62,6 +72,51 @@
                 
                 <input class="fullwidth" type="range" id="borderRadiusRangeCounter" min="0" max="100" value="0" oninput="change('border radius')">
                 
+            </div>
+            <div class="boxShadowBlock" style="border: 2px dashed #c4c5c5; padding: 10px; margin: 5px;">
+                <h4 style="margin-bottom: 10px;">Box Shadow</h4>
+                <div class="data">
+                    <label for="boxShadowColorValue">Color :</label>
+                    <p class="cvalue"><span id="boxShadowColorName"></span></p>
+
+                </div>
+                <input  class="fullwidth" type="color" id="boxShadowColorValue" oninput="change('boxShadowColor')">
+
+                <!--  -->
+                <div class="xAxisBlock">
+                    <div class="data">
+                        <label for="xAxisCounter">X Axis :</label>
+                        <p class="cvalue"><span id="xAxisValue"></span> px</p>
+    
+                    </div>
+                    
+                    <input  class="fullwidth"  type="range" id="xAxisCounter" min="-20" max="20" value="0" oninput="change('xAxis')">
+                    
+                </div>
+            
+                <div class="yAxisBlock">
+                    <div class="data">
+                        <label for="yAxisCounter">Y Axis :</label>
+                        <p class="cvalue"><span id="yAxisValue"></span> px</p>
+    
+                    </div>
+                    
+                    <input  class="fullwidth"  type="range" id="yAxisCounter" min="-20" max="20" value="0" oninput="change('yAxis')">
+                    
+                </div>
+                <div class="shadowSpreadBlock">
+                    <div class="data">
+                        <label for="shadowSpreadCounter">Spread :</label>
+                        <p class="cvalue"><span id="shadowSpreadValue"></span> px</p>
+    
+                    </div>
+                    
+                    <input  class="fullwidth"  type="range" id="shadowSpreadCounter" min="0" max="20" value="0" oninput="change('shadowSpread')">
+                    
+                </div>
+
+
+                <!--  -->
             </div>
             <div style="margin-top: 40px;">
                 <h3>Style Section :</h3>

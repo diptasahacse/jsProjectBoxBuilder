@@ -7,6 +7,14 @@
         Website : https://diptasaha.com/
         */
          
+//
+
+
+
+
+
+
+        //
          function setValue(){
              //backround
              document.getElementById("makeBox").style.backgroundColor = 'rgb(74, 234, 1)';
@@ -39,6 +47,21 @@
            // Border Radius
            document.getElementById("borderRadiusValue").innerText = document.getElementById("borderRadiusRangeCounter").value;
            document.getElementById("makeBox").style.borderRadius = document.getElementById("borderRadiusRangeCounter").value+"px";
+
+
+
+           //Box Shadow color
+           document.getElementById('boxShadowColorName').innerText = document.getElementById('boxShadowColorValue').value;
+
+           //Box Shadow x
+           document.getElementById('xAxisValue').innerText = document.getElementById('xAxisCounter').value;
+
+           //Box Shadow y
+           document.getElementById('yAxisValue').innerText = document.getElementById('yAxisCounter').value;
+
+
+           //Box Shadow spread
+           document.getElementById('shadowSpreadValue').innerText = document.getElementById('shadowSpreadCounter').value;
 
        };
        function change(parameter){
@@ -96,9 +119,26 @@
                updateCss();
 
            }
+           if(parameter === 'boxShadowColor'){
+            document.getElementById('boxShadowColorName').innerText = document.getElementById('boxShadowColorValue').value;
+            applyBoxShadow();
+           }
+           if(parameter === 'xAxis'){
+            document.getElementById('xAxisValue').innerText = document.getElementById('xAxisCounter').value;
+            applyBoxShadow();
+           }
+           if(parameter === 'yAxis'){
+            document.getElementById('yAxisValue').innerText = document.getElementById('yAxisCounter').value;
+            applyBoxShadow();
+           }
+           if(parameter === 'shadowSpread'){
+            document.getElementById('shadowSpreadValue').innerText = document.getElementById('shadowSpreadCounter').value;
+            applyBoxShadow();
+           }
 
        }
        setValue();
+       applyBoxShadow();
        updateCss();
          
        function updateCss(){
@@ -111,13 +151,23 @@
                 inrHtml+=seperateStyle[i]+';';
 
             }else{
-                inrHtml+=seperateStyle[i]+';<br>';
+                inrHtml+=seperateStyle[i]+';<br> ';
             }
         }
-        document.getElementById('cssSec').innerHTML = "{<br>"+inrHtml+"<br>}";
+        document.getElementById('cssSec').innerHTML = "<pre>{<br>  "+inrHtml+"<br>}</pre>";
 
     }
-    
+    function applyBoxShadow(){
+        var xAxis, yAxis, spread, color;
+        color = document.getElementById('boxShadowColorValue').value;
+        xAxis = document.getElementById('xAxisCounter').value;
+        yAxis = document.getElementById('yAxisCounter').value;
+        spread = document.getElementById('shadowSpreadCounter').value;
+        document.getElementById("makeBox").style.boxShadow = color+' '+xAxis+'px '+yAxis+'px '+spread+'px';
+        updateCss();
+        
+
+    }
  
 
 
