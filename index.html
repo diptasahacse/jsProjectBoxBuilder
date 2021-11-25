@@ -11,16 +11,16 @@
     <div class="container">
         <div class="input-area">
             <h3 style="margin-bottom: 10px;">Input Section :</h3>
-            <!-- <div class="backColorBlock">
+            <div class="backColorBlock">
                 <div class="data">
                     <label for="backColorRangeCounter">Background :</label>
-                    <p class="cvalue"><span id="backColorValue"></span> px</p>
+                    <p class="cvalue"><span id="backColorValue"></span></p>
 
                 </div>
                 
-                <input  class="fullwidth"  type="color" id="backColorRangeCounter" oninput="change('')">
+                <input  style="border: none;"  class="fullwidth"  type="color" id="backColorRangeCounter" oninput="change('background')">
                 
-            </div>             -->
+            </div>            
             <div class="heightWidthBlock">
                 <div class="data">
                     <label for="heightWidthRangeCounter">Height And Width :</label>
@@ -52,14 +52,55 @@
                 
             </div>
 
-            <div class="borderBlock">
+            <div class="borderBlock"  style="border: 2px dashed #c4c5c5; padding: 10px; margin: 5px;">
                 <div class="data">
                     <label for="borderRangeCounter">Border :</label>
                     <p class="cvalue"><span id="borderValue"></span> px</p>
 
                 </div>
                 
-                <input class="fullwidth" type="range" id="borderRangeCounter" min="0" max="10" value="0" oninput="change('border')">
+                <input class="fullwidth" type="range" id="borderRangeCounter" min="0" max="10" value="0" oninput="change('border-width')">
+                <h3>Border Type</h3>
+                <!-- Solid -->
+                <input id="solid" type="radio" value="solid" name="bordertype" onclick="change('selectedRadio')">
+                <label for="solid">Solid</label>
+                <br>
+                <!-- Dash -->
+                <input id="dashed" type="radio" value="dashed" name="bordertype" onclick="change('selectedRadio')">
+                <label for="dashed">Dashed</label>
+                <br>
+                <!-- Dotted -->
+                <input id="dotted" type="radio" value="dotted" name="bordertype" onclick="change('selectedRadio')">
+                <label for="dotted">Dotted</label>
+                <br>
+                <!-- Double -->
+                <input id="double" type="radio" value="double" name="bordertype" onclick="change('selectedRadio')">
+                <label for="double">Double</label>
+                <br>
+                <!-- Groove -->
+                <input id="groove" type="radio" value="groove" name="bordertype" onclick="change('selectedRadio')">
+                <label for="groove">Groove</label>
+                <br>
+                <!-- Ridge -->
+                <input id="ridge" type="radio" value="ridge" name="bordertype" onclick="change('selectedRadio')">
+                <label for="ridge">Ridge</label>
+                <br>
+                <!-- Inset -->
+                <input id="inset" type="radio" value="inset" name="bordertype" onclick="change('selectedRadio')">
+                <label for="inset">Inset</label>
+                <br>
+                <!-- Outset -->
+                <input id="outset" type="radio" value="outset" name="bordertype" onclick="change('selectedRadio')">
+                <label for="outset">Outset</label>
+                <br>
+
+                <div class="data">
+                    <label for="borderColorValue">Color :</label>
+                    <p class="cvalue"><span id="borderColorName"></span></p>
+
+                </div>
+                <input style="border: none;"  class="fullwidth" type="color" id="borderColorValue" oninput="change('borderColor')">
+
                 
             </div>
 
@@ -82,7 +123,6 @@
                 </div>
                 <input style="border: none;"  class="fullwidth" type="color" id="boxShadowColorValue" oninput="change('boxShadowColor')">
 
-                <!--  -->
                 <div class="xAxisBlock">
                     <div class="data">
                         <label for="xAxisCounter">X Axis :</label>
@@ -114,9 +154,6 @@
                     <input  class="fullwidth"  type="range" id="shadowSpreadCounter" min="0" max="20" value="0" oninput="change('shadowSpread')">
                     
                 </div>
-
-
-                <!--  -->
             </div>
             <div style="margin-top: 40px;">
                 <h3>Style Section :</h3>

@@ -16,18 +16,28 @@
 
         //
          function setValue(){
-             //backround
-             document.getElementById("makeBox").style.backgroundColor = 'rgb(74, 234, 1)';
+            //border style
+
+            //border color
+            document.getElementById('borderColorName').innerText = document.getElementById('borderColorValue').value;
+
+
+
+
+             //Box background
+             
+             document.getElementById('backColorValue').innerText = document.getElementById('backColorRangeCounter').value;
+             document.getElementById("makeBox").style.backgroundColor = document.getElementById('backColorRangeCounter').value;
+             
+
+
+
              
 
 
             //Height And Width
            document.getElementById("heightWidthValue").innerText = document.getElementById("heightWidthRangeCounter").value;
 
-            
-
-           //  document.getElementById("makeBox").style.height = document.getElementById("heightWidthRangeCounter").value+"px";
-           //  document.getElementById("makeBox").style.width = document.getElementById("heightWidthRangeCounter").value+"px";
 
 
 
@@ -41,7 +51,7 @@
            
            // Border Value
            document.getElementById("borderValue").innerText = document.getElementById("borderRangeCounter").value;
-           document.getElementById("makeBox").style.border = document.getElementById("borderRangeCounter").value+"px solid";
+           
 
 
            // Border Radius
@@ -65,6 +75,29 @@
 
        };
        function change(parameter){
+           if(parameter === 'selectedRadio'){
+               applyBorder();
+               updateCss();
+            
+               
+
+           }
+           if(parameter === 'borderColor'){
+                document.getElementById('borderColorName').innerText = document.getElementById('borderColorValue').value;
+
+                applyBorder();
+                updateCss();
+
+
+
+           }
+           if(parameter === 'background'){
+                document.getElementById('backColorValue').innerText = document.getElementById('backColorRangeCounter').value;
+                document.getElementById("makeBox").style.backgroundColor = document.getElementById('backColorRangeCounter').value;
+                updateCss();
+
+
+           }
         if(parameter === 'heightWidth'){
             
             document.getElementById("heightWidthValue").innerText = document.getElementById("heightWidthRangeCounter").value;
@@ -101,11 +134,11 @@
                
 
            }
-           if(parameter === 'border'){
+           if(parameter === 'border-width'){
             
                document.getElementById("borderValue").innerText = document.getElementById("borderRangeCounter").value;
 
-               document.getElementById("makeBox").style.border = document.getElementById("borderRangeCounter").value+"px solid";
+               applyBorder();
                updateCss();
 
            }
@@ -139,6 +172,7 @@
        }
        setValue();
        applyBoxShadow();
+       applyBorder();
        updateCss();
          
        function updateCss(){
@@ -170,6 +204,24 @@
     }
  
 
+    function applyBorder(){
+        var bWidth, bColor, bStyle;
+        bColor = document.getElementById('borderColorValue').value;
+        bWidth = document.getElementById("borderRangeCounter").value;
+        bStyle = getBorderStyle();
+        document.getElementById("makeBox").style.border = bWidth+"px "+bStyle+" "+bColor;
+        updateCss();
+
+        // document.getElementById("makeBox").style.border = document.getElementById("borderRangeCounter").value+"px solid";
+    }
+    function getBorderStyle(){
+        var ele = document.getElementsByName('bordertype');
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked){
+                    return ele[i].value;
+                }
+            }
+    }
 
        
 
